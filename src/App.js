@@ -1,26 +1,17 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [value, setValue] = useState(0);
   return (
     <div className="App">
       <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
+        <h2>My First React Program</h2>
+       <p>Wert: <span>{value}</span></p>
+       <div>
+        <button onClick={() => setValue(value + 1)}>+</button>
+        <button onClick={() => setValue(value - 1)}>-</button>
+       </div>
       </header>
     </div>
   );
